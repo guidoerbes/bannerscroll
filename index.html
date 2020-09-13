@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> phone scroll banner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Quienes Somos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="img/p40-pro-blue.png" class="mobile" alt="">
+            <div id="circle"> 
+                <div class="feature one">
+                    <img src="img/precesador png.png" alt="">
+                    <div>
+                        <h1>Procesador</h1>
+                        <p>Kirin 990, Octa-Core, 8 Gb Ram. </p>
+                    
+                 
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="img/display png.png" alt="">
+                    <div>
+                    <h1>Display</h1>
+                    <p>6,6" Super AMOLLED 2640X1200 </p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="img/obturador png.png" alt="">
+                    <div>
+                    <h1>Cámara</h1>
+                    <p>50 Mp. </p>
+                    </div>
+
+                </div>
+                <div class="feature four">
+                    <img src="img/bateria blanca png.png" alt="">
+                    <div>
+                    <h1>Bateria</h1>
+                    <p>4.200 mAh, Carga Rápida 40 W. </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="controls">
+            <img src="img/arrow.png" id="upBtn" alt="">
+            <h3>Features</h3>
+            <img src="img/arrow.png" id="downBtn" alt="">
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+
+        }
+       
+
+
+    </script>
+
+    
+</body>
+</html>
